@@ -80,45 +80,62 @@ Anschließend erfolgt die **Abrufbarkeit und Visualisierung** über eine Webober
 
 ---
 
-## Projektphasen
+# 🚀 Projekt-Roadmap: MissionControl-DataHub
 
-### Phase 1: Aufbau der Hardware
-- Zusammenbau aller Arduinos und Sensoren
-- USB-Verbindung aller Geräte mit dem Raspberry Pi
-- Funktionstest aller Sensoren einzeln
+## 1. Aufbau der Hardware
+- Zusammenbau der Sensor-Module und Mikrocontroller (Arduino, ESP32-CAM)
+- Verbindung aller Arduinos und Sensoren mit dem Raspberry Pi via USB/seriell
 
-### Phase 2: Datenkommunikation
-- Python-Skripte zum Auslesen der seriellen Schnittstellen
-- Definition eines standardisierten JSON-Datenformats
-- Fehlerbehandlung für nicht antwortende Geräte
+## 2. Datenkommunikation
+- Definition des JSON-Datenformats für alle Sensordaten
+- Python-Skript auf dem Raspberry Pi zur Erfassung und Aufbereitung der eingehenden Sensordaten
 
-### Phase 3: Datenpersistenz
-- Anlegen der Datenbankstrukturen (SQLite & PostgreSQL/MySQL)
-- Entwicklung der Python-Logik zur parallelen Speicherung
+## 3. Speicherung der Daten
+- Aufbau einer lokalen SQLite-Datenbank
+- Aufbau einer PostgreSQL- oder MySQL-Datenbank
+- Paralleles Schreiben der Sensorwerte in beide Systeme
 
-### Phase 4: Webserver und Visualisierung
-- Lokalen Webserver aufsetzen (Apache2 oder Nginx)
-- Entwicklung des HTML/JavaScript-Frontends
-- Integration von Charts und Diagrammen
+## 4. Webserver und Frontend
+- Einrichtung eines lokalen Webservers (Apache2 oder Nginx) auf dem Raspberry Pi
+- Entwicklung eines Web-Frontends zur Anzeige der aktuellen Sensorwerte in Echtzeit (HTML/JavaScript)
+- Implementierung von Diagrammen und Statistiken
 
-### Phase 5: Raumschiff-Simulation
-- Definition von Events (z.B. Sauerstoffmangel, Strahlungsalarm)
-- Aufbau der Spielmechanik basierend auf Sensorwerten
-- Implementierung einer Benutzeroberfläche für das Spiel
+## 5. Simulation der Raumschiff-Umgebung
+- Definition von "Raumschiff-Events" (z.B. Sauerstoffmangel, Strahlungsalarm)
+- Implementierung eines einfachen Spiels auf Basis der Live-Daten
+- Anzeigen von Alarmen und Missionsstatus im Web-Interface
+
+## 6. Erweiterungen (Future Work)
+- Integration von Node-RED oder MQTT für IoT-Erweiterungen
+- Mobile App zur Steuerung und Überwachung
+- Automatische Kalibrierung und Fehlererkennung der Sensoren
 
 ---
 
-## Zeitplan (realistisch)
+# 📅 Zeitplan
+- Mai 2025: Hardwareaufbau und Datenkommunikation
+- Mai 2025: Datenbank-Integration
+- Juni 2025: Webserver-Entwicklung und Visualisierung
+- Juni/Juli 2025: Simulation und Spiel-Logik
+- Juli 2025: Veröffentlichung als Stable Release (v1.0)
 
-| Phase                       | Dauer           | Start      |
-|------------------------------|-----------------|------------|
-| Hardware-Aufbau              | 1 Woche          | Mai 2025   |
-| Datenkommunikation           | 1 Woche          | Mai 2025   |
-| Datenpersistenz              | 1 Woche          | Mai 2025   |
-| Webserver & Visualisierung   | 2 Wochen         | Mai 2025   |
-| Simulation & Spiellogik      | 2–4 Wochen       | Juni 2025  |
+---
 
-**Gesamtdauer:** ca. 6–8 Wochen (parallel möglich!)
+# 🛠️ ToDo-Liste
+- [ ] Hardware vollständig verkabeln
+- [ ] Python-Serielles Interface testen
+- [ ] SQLite-Datenbankmodell erstellen
+- [ ] PostgreSQL-/MySQL-Datenbank aufsetzen
+- [ ] Web-Frontend Grundstruktur bauen
+- [ ] Erste Sensorwerte live anzeigen
+- [ ] Spiellogik entwickeln
+- [ ] Erste Beta-Version veröffentlichen
+
+---
+
+# 🌟 Projektziel
+Ein modulares, robustes und cooles System schaffen, das sowohl reale Sensordaten verarbeitet als auch eine spannende Simulationswelt erschafft!
+
 
 ---
 
